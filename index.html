@@ -1,99 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alexander Markowitz PhD</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css" />
-  <!-- GSAP Animation Library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <!-- ScrollMagic Library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
-  <!-- Chart.js for interactive charts -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <!-- SEO & OpenGraph Meta Tags -->
-  <meta name="description" content="Portfolio of a clinical bioinformatics scientist specializing in AI, machine learning, and pediatric diagnostics." />
-  <meta property="og:title" content="Clinical Bioinformatics Scientist Portfolio" />
-  <meta property="og:description" content="Showcasing research, projects, and AI-driven innovations in clinical informatics." />
-  <meta property="og:image" content="E766F764-62EB-4B5D-A9A1-26C531418D7A_1_105_c.jpeg" />
-  
-</head>
-<body class="bg-white text-gray-900 transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
-  <!-- Navigation Bar -->
-  <!-- Header -->
-<header class="fixed w-full z-50 bg-white dark:bg-gray-800 shadow">
-  <div class="container mx-auto flex justify-between items-center py-4 px-6">
-    <!-- Branding -->
-    <div class="text-xl font-bold">Alexander Markowitz, PhD</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alexander Markowitz PhD</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="main.js" defer></script>
 
-    <!-- Navigation and Controls -->
-    <div class="flex items-center">
-      <!-- Mobile Menu Button (visible on small screens) -->
-      <button id="mobileMenuButton" class="md:hidden text-gray-800 dark:text-gray-200 focus:outline-none">
-        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-             xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- ScrollMagic Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <!-- Chart.js for interactive charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- SEO & OpenGraph Meta Tags -->
+    <meta name="description" content="Portfolio of a clinical bioinformatics scientist specializing in AI, machine learning, and pediatric diagnostics." />
+    <meta property="og:title" content="Clinical Bioinformatics Scientist Portfolio" />
+    <meta property="og:description" content="Showcasing research, projects, and AI-driven innovations in clinical informatics." />
+    <meta property="og:image" content="E766F764-62EB-4B5D-A9A1-26C531418D7A_1_105_c.jpeg" />
+  </head>
+  <body class="bg-white text-gray-900 transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-white dark:bg-gray-800 shadow">
+      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <!-- Branding -->
+        <div class="text-xl font-bold">Alexander Markowitz, PhD</div>
+        
+        <!-- Navigation and Controls -->
+        <div class="flex items-center">
+          <!-- Mobile Menu Button (visible only on small screens) -->
+          <button id="mobileMenuButton" class="md:hidden text-gray-800 dark:text-gray-200 focus:outline-none mr-4">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+          
+          <!-- Desktop Navigation (hidden on small screens) -->
+          <nav class="hidden md:flex space-x-6">
+            <a href="#hero" class="hover:text-teal-500">Home</a>
+            <a href="#about" class="hover:text-teal-500">About</a>
+            <a href="#journey" class="hover:text-teal-500">Journey</a>
+            <a href="#projects" class="hover:text-teal-500">Projects</a>
+            <a href="#research" class="hover:text-teal-500">Research</a>
+            <a href="#skills" class="hover:text-teal-500">Skills</a>
+            <a href="#vision" class="hover:text-teal-500">Vision</a>
+            <a href="#contact" class="hover:text-teal-500">Contact</a>
+          </nav>
+          
+          <!-- Dark Mode Toggle (always visible) -->
+        </div>
+      </div>
       
-      <!-- Desktop Navigation (hidden on small screens) -->
-      <nav class="hidden md:flex ml-6">
-        <ul class="flex space-x-6">
-          <li><a href="#hero" class="hover:text-teal-500">Home</a></li>
-          <li><a href="#about" class="hover:text-teal-500">About</a></li>
-          <li><a href="#journey" class="hover:text-teal-500">Journey</a></li>
-          <li><a href="#projects" class="hover:text-teal-500">Projects</a></li>
-          <li><a href="#research" class="hover:text-teal-500">Research</a></li>
-          <li><a href="#skills" class="hover:text-teal-500">Skills</a></li>
-          <li><a href="#vision" class="hover:text-teal-500">Vision</a></li>
-          <li><a href="#contact" class="hover:text-teal-500">Contact</a></li>
+      <!-- Mobile Navigation Menu (toggled via the hamburger button) -->
+      <nav id="mobileMenu" class="md:hidden hidden bg-white dark:bg-gray-800">
+        <ul class="flex flex-col space-y-2 px-6 py-4">
+          <li><a href="#hero" class="block hover:text-teal-500">Home</a></li>
+          <li><a href="#about" class="block hover:text-teal-500">About</a></li>
+          <li><a href="#journey" class="block hover:text-teal-500">Journey</a></li>
+          <li><a href="#projects" class="block hover:text-teal-500">Projects</a></li>
+          <li><a href="#research" class="block hover:text-teal-500">Research</a></li>
+          <li><a href="#skills" class="block hover:text-teal-500">Skills</a></li>
+          <li><a href="#vision" class="block hover:text-teal-500">Vision</a></li>
+          <li><a href="#contact" class="block hover:text-teal-500">Contact</a></li>
         </ul>
       </nav>
-      
-      <!-- Dark Mode Toggle -->
-      <button id="darkModeToggle" class="ml-4 p-2 rounded bg-gray-200 dark:bg-gray-700">
-        Toggle Dark Mode
-      </button>
-    </div>
-  </div>
+    </header>
 
-  <!-- Mobile Navigation Menu (initially hidden) -->
-  <nav id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-800">
-    <ul class="flex flex-col space-y-2 px-6 py-4">
-      <li><a href="#hero" class="block hover:text-teal-500">Home</a></li>
-      <li><a href="#about" class="block hover:text-teal-500">About</a></li>
-      <li><a href="#journey" class="block hover:text-teal-500">Journey</a></li>
-      <li><a href="#projects" class="block hover:text-teal-500">Projects</a></li>
-      <li><a href="#research" class="block hover:text-teal-500">Research</a></li>
-      <li><a href="#skills" class="block hover:text-teal-500">Skills</a></li>
-      <li><a href="#vision" class="block hover:text-teal-500">Vision</a></li>
-      <li><a href="#contact" class="block hover:text-teal-500">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-  <!-- Hero Section -->
-  <section id="hero" class="h-screen flex items-center justify-center relative">
-    <!-- Background image overlay -->
-    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('hero-bg.jpg'); opacity: 0.3;"></div>
-    <div class="container mx-auto text-center relative z-10">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4">
-        Clinical Bioinformatics &amp; Translational Medicine
-      </h1>
-      <p class="text-xl md:text-2xl mb-6">
-        Bridging AI, Data Science, and Pediatric Oncology to Advance Diagnostics
-      </p>
-      <!-- Typewriter animated text -->
-      <div id="typewriter" class="text-lg md:text-xl font-mono"></div>
-      <div class="mt-8">
-        <a href="#about" class="px-6 py-3 bg-teal-500 text-white rounded hover:bg-teal-600">Learn More</a>
+    <!-- Your page content goes here -->
+    
+    <!-- Scripts for Mobile Menu and Dark Mode Toggle -->
+    <script>
+      // Toggle mobile navigation menu
+      const mobileMenuButton = document.getElementById('mobileMenuButton');
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Toggle dark mode and icon swap
+      // const darkModeToggle = document.getElementById('darkModeToggle');
+      // const sunIcon = document.getElementById('sunIcon');
+      // const moonIcon = document.getElementById('moonIcon');
+      // darkModeToggle.addEventListener('click', () => {
+      //   document.documentElement.classList.toggle('dark');
+      //   sunIcon.classList.toggle('hidden');
+      //   moonIcon.classList.toggle('hidden');
+      // });
+    </script>
+  </body>
+
+    <!-- Hero Section -->
+    <section id="hero" class="h-screen flex items-center justify-center relative">
+      <!-- Background image -->
+      <!-- Dark overlay for better text contrast -->
+      <div class="container mx-auto text-center relative z-10">
+        <h3 class="text-4xl md:text-6xl font-bold mb-4 text-black">
+          Clinical Bioinformatics &amp; Translational Medicine
+        </h3>
+        <h2 class="text-xl md:text-2xl mb-6">
+          Bridging AI, Data Science, and Pediatric Oncology to Advance Diagnostics
+        </h2>
+        <!-- Typewriter animated text -->
+        <div id="typewriter" class="text-lg md:text-xl font-mono"></div>
+        <div class="mt-8">
+          <a href="#about" class="px-6 py-3 bg-teal-600 text-white rounded hover:bg-teal-600">
+            Learn More
+          </a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+
 
 <!-- About Me Section -->
 <section id="about" class="py-20 bg-gray-100 dark:bg-gray-800">
