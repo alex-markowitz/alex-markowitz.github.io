@@ -24,32 +24,58 @@
 </head>
 <body class="bg-white text-gray-900 transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
   <!-- Navigation Bar -->
-  <header class="fixed w-full z-50 bg-white dark:bg-gray-800 shadow">
-    <div class="container mx-auto flex justify-between items-center py-4 px-6">
-      <div class="text-xl font-bold">Alexander Markowitz, PhD</div>
-      <nav>
+  <!-- Header -->
+<header class="fixed w-full z-50 bg-white dark:bg-gray-800 shadow">
+  <div class="container mx-auto flex justify-between items-center py-4 px-6">
+    <!-- Branding -->
+    <div class="text-xl font-bold">Alexander Markowitz, PhD</div>
+
+    <!-- Navigation and Controls -->
+    <div class="flex items-center">
+      <!-- Mobile Menu Button (visible on small screens) -->
+      <button id="mobileMenuButton" class="md:hidden text-gray-800 dark:text-gray-200 focus:outline-none">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+             xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+      
+      <!-- Desktop Navigation (hidden on small screens) -->
+      <nav class="hidden md:flex ml-6">
         <ul class="flex space-x-6">
-          <li><a href="#hero" class="nav-link hover:text-teal-500">Home</a></li>
-          <li><a href="#about" class="nav-link hover:text-teal-500">About</a></li>
-          <li><a href="#journey" class="nav-link hover:text-teal-500">Journey</a></li>
-          <li><a href="#projects" class="nav-link hover:text-teal-500">Projects</a></li>
-          <li><a href="#research" class="nav-link hover:text-teal-500">Research</a></li>
-          <li><a href="#skills" class="nav-link hover:text-teal-500">Skills</a></li>
-          <li><a href="#vision" class="nav-link hover:text-teal-500">Vision</a></li>
-          <li><a href="#contact" class="nav-link hover:text-teal-500">Contact</a></li>
+          <li><a href="#hero" class="hover:text-teal-500">Home</a></li>
+          <li><a href="#about" class="hover:text-teal-500">About</a></li>
+          <li><a href="#journey" class="hover:text-teal-500">Journey</a></li>
+          <li><a href="#projects" class="hover:text-teal-500">Projects</a></li>
+          <li><a href="#research" class="hover:text-teal-500">Research</a></li>
+          <li><a href="#skills" class="hover:text-teal-500">Skills</a></li>
+          <li><a href="#vision" class="hover:text-teal-500">Vision</a></li>
+          <li><a href="#contact" class="hover:text-teal-500">Contact</a></li>
         </ul>
       </nav>
-      <script>
-        tailwind.config = {
-          darkMode: 'class',
-        };
-      </script>      
-      <button id="darkModeToggle" class="ml-4 p-0.5 rounded bg-gray-200 dark:bg-gray-700">
-        Dark Mode
+      
+      <!-- Dark Mode Toggle -->
+      <button id="darkModeToggle" class="ml-4 p-2 rounded bg-gray-200 dark:bg-gray-700">
+        Toggle Dark Mode
       </button>
     </div>
-  </header>
+  </div>
 
+  <!-- Mobile Navigation Menu (initially hidden) -->
+  <nav id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-800">
+    <ul class="flex flex-col space-y-2 px-6 py-4">
+      <li><a href="#hero" class="block hover:text-teal-500">Home</a></li>
+      <li><a href="#about" class="block hover:text-teal-500">About</a></li>
+      <li><a href="#journey" class="block hover:text-teal-500">Journey</a></li>
+      <li><a href="#projects" class="block hover:text-teal-500">Projects</a></li>
+      <li><a href="#research" class="block hover:text-teal-500">Research</a></li>
+      <li><a href="#skills" class="block hover:text-teal-500">Skills</a></li>
+      <li><a href="#vision" class="block hover:text-teal-500">Vision</a></li>
+      <li><a href="#contact" class="block hover:text-teal-500">Contact</a></li>
+    </ul>
+  </nav>
+</header>
   <!-- Hero Section -->
   <section id="hero" class="h-screen flex items-center justify-center relative">
     <!-- Background image overlay -->
