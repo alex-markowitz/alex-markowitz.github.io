@@ -31,9 +31,10 @@ document.addEventListener("DOMContentLoaded", function () {
     /* Typewriter Effect in the Hero Section */
     const typewriterTexts = [
         "Machine Learning",
+        "Ethical AI",
         "Translational Informatics",
         "Bioinformatics",
-        "AI in Healthcare",
+        "Healthcare AI Solutions"
     ];
     let typewriterIndex = 0;
     let charIndex = 0;
