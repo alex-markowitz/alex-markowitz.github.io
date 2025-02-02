@@ -2,7 +2,10 @@
 document.getElementById("darkModeToggle").addEventListener("click", function () {
     document.documentElement.classList.toggle("dark");
   });
-  
+
+document.getElementById("mobileMenuButton").addEventListener("click", function () {
+    document.getElementById("mobileMenu").classList.toggle("hidden");
+  });  
   
   /* Typewriter effect in the hero section */
   const typewriterTexts = [
