@@ -1,0 +1,40 @@
+/* Custom styling for timeline elements */
+.timeline {
+    position: relative;
+    margin-left: 2rem;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #38b2ac; /* teal color */
+  }
+  
+  /* Typewriter effect styling */
+  #typewriter {
+    overflow: hidden;
+    border-right: 0.15em solid currentColor;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.15em;
+    animation: blink-caret 0.75s step-end infinite;
+  }
+  
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: currentColor;
+    }
+  }
+  
+  /* Enable smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
